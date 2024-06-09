@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@tailwind base;
+
+@layer base {
+    h1 {
+        @apply text-8xl;
+    }
+}
+
+@tailwind components;
+
+@layer components {
+    .grid-card {
+        @apply  rounded-lg md:aspect-[3/4] xl:aspect-[4/3] overflow-hidden aspect-[4/3] relative hover:scale-95 transition-all duration-500 cursor-pointer;
+    }
+    .grid-card-img {
+        @apply w-full h-full bg-cover bg-center absolute hover:scale-125 transition-all duration-500;
+    }
+}
+
+@tailwind utilities;
+
+@layer utilities {
+    #toggle:checked ~ label div.toggle-circle {
+        @apply translate-x-3; /* This equals to translateX(12px) */
+    }
+}
